@@ -1,0 +1,2200 @@
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #131b18;
+    /* Prevent horizontal scroll */
+    text-align: center;
+    color: rgba(226, 233, 228, 0.5);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    min-height: 100vh;
+    /* Ensure body takes full height of viewport */
+}
+
+.light-mode {
+    filter: invert(1);
+    background-color: #EBE4E7;
+    color: #131b18;
+}
+
+.light-mode .work-container:hover {
+    filter: invert(1);
+    /* Revert the inversion when hovering */
+    transition: filter 0.3s ease-in-out;
+}
+
+.light-mode img {
+    filter: invert(1);
+}
+
+.light-mode .img-invert {
+    filter: none;
+}
+
+body.light-mode .video-invert {
+    filter: none;
+}
+
+body.light-mode .video-no-invert {
+    filter: invert(1);
+}
+
+
+
+/* Nav bar */
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.8vw 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(180deg, rgba(64, 91, 81, 0.5) 0%, rgba(19, 27, 24, 0) 100%);
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 8vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav-bar-button {
+    font-size: 1.05vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-bar-button:hover {
+    text-decoration: underline; 
+}
+
+
+.nav-bar-link {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.button-outline {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    gap: 3vw; /* Adjusted gap to reduce excessive spacing */
+    padding: 0 2vw; /* Ensures even padding on both sides of the buttons */
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #e2e9e4;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+
+/* intro-------------------------------------- */
+
+.intro {
+    position: relative;
+    top: 0vw;
+    height: 30vw;
+    width: 100vw;
+    margin-bottom: 10vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.scrollintro {
+    height: 30vw;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Prevents any content overflow from showing */
+    white-space: nowrap;
+    /* Prevents wrapping of sections */
+}
+
+.section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 60vw;
+    top: 14vw;
+    width: 14vw;
+    /* 320px to vw */
+    height: 8vw;
+    /* 170px to vw */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.95vw;
+    /* 15px to vw */
+    box-shadow: 0vw 1.04vw 2.08vw rgba(0, 0, 0, 0.2);
+    /* 0 4px 8px */
+    font-size: 1.87vw;
+    /* 24px to vw */
+    transform: translateX(0) translateY(0) scale(0.1);
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.section img,
+.section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire div while maintaining aspect ratio */
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0.6vw;
+}
+
+#section7 {
+    border: none;
+    box-shadow: none;
+}
+
+#section3 {
+    width: 16vw;
+}
+
+.section.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) translateY(0) scale(2.5);
+    /* Default scale of 2.5 for the first section */
+}
+
+.section.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.headline {
+    font-size: 2vw;
+    color: #e2e9e4;
+    margin: 0;
+    padding: 0vw 15vw;
+    opacity: 0;
+    transform: translateY(2.6vw);
+    /* 20px to vw */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Smooth transition for both position and opacity */
+    position: absolute;
+    left: 48vw;
+    top: 12.5vw;
+    height: 15vw;
+    text-align: left;
+}
+
+#headline1 {
+    position: absolute;
+    left: 52vw;
+    top: 12.5vw;
+    height: 15vw;
+    text-align: left;
+}
+
+#headline2,
+#headline3 {
+    position: absolute;
+    left: 52vw;
+    top: 15vw;
+    height: 15vw;
+    text-align: left;
+}
+
+#headline4,
+#headline5 {
+    position: absolute;
+    left: 52vw;
+    top: 16vw;
+    height: 15vw;
+    text-align: left;
+}
+
+#headline6 {
+    position: absolute;
+    left: 52vw;
+    top: 16vw;
+    height: 15vw;
+    text-align: left;
+}
+
+#headline7 {
+    position: absolute;
+    left: 38vw;
+    top: 10vw;
+    height: 20vw;
+    text-align: left;
+    width: 20vw;
+}
+
+#start-text {
+    font-size: 1.3vw;
+    color: #e2e9e4;
+    margin: 0;
+    position: relative;
+    top: 6vh;
+    left: -15%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    animation: fadeInOut 2.5s;
+    animation-iteration-count: infinite;
+}
+
+/* Keyframes for fade in and out */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#scroll-back-btn {
+    position: relative;
+    top: 6vw;
+    left: -12vw;
+}
+
+.button-outline {
+    position: relative;
+    border-radius: 1.3vw;
+    border: 0.26vw solid #e2e9e4;
+    /* 4px to vw */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.7vw 1.5vw;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.3vw;
+    color: #e2e9e4;
+}
+
+.button-outline:hover {
+    background-color: #e2e9e4;
+    /* Fill background on hover */
+    color: #131b18;
+}
+
+/* Footer */
+
+footer {
+    cursor: pointer;
+    width: 100%;
+    height: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(0deg, rgba(64, 91, 81, 0.5) 50%, rgba(19, 27, 24, 0) 100%);
+    z-index: 890;
+    padding-bottom: 10vw;
+}
+
+/*  CV ----------------------- */
+
+.CV {
+    margin: 10vw 5vw;
+    padding: 5vw 5vw;
+    align-items: center;
+    justify-items: center;
+}
+
+h2 {
+    position: relative;
+    font-size: 2vw;
+    display: flex;
+    color: #e2e9e4;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0vw 2vw;
+    margin: 0;
+}
+
+.CV p {
+    font-size: 1.5vw;
+}
+
+.CVcontainer {
+    width: 20vw;
+}
+
+
+.CVcontainer2 {
+    width: 50vw;
+}
+
+.Education {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5vw;
+    text-align: left;
+    color: #e2e9e4;
+}
+
+.Education h2 {
+    position: relative;
+    top: 1vw;
+}
+
+.Skill {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 15vw;
+    text-align: left;
+    color: #e2e9e4;
+    margin: 10vw 0vw;
+}
+
+.Skill h2 {
+    position: relative;
+    top: 0vw;
+    left: 1vw;
+    height: 10vw;
+}
+
+.Iconcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2vw;
+    padding-left: 1.5vw;
+    position: relative;
+    left: -6vw;
+}
+
+.Softwareicon {
+    width: 5vw;
+    /* 100px to vw */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 2.6vw 0;
+}
+
+.Softwarecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8.5vw;
+    padding: 3vw 0vw 0vw;
+    position: relative;
+    left: -17vw;
+}
+
+.Softwareicon2 {
+    width: 4vw;
+    height: auto;
+    margin: 4.2vw 0;
+    position: relative;
+    top: -1vw;
+}
+
+.Softwarecontainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8.5vw;
+    padding: 3vw 0vw 0vw;
+    position: relative;
+    top: 0vw;
+    left: -34vw;
+}
+
+.Iconcontainer2 {
+    position: relative;
+    left: -25vw;
+}
+
+.Language {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 7vw;
+    text-align: left;
+    color: #e2e9e4;
+    margin: 10vw 0vw;
+}
+
+.CVcontainer3 {
+    position: relative;
+    left: 6.5vw;
+}
+
+.Language h2 {
+    position: relative;
+    top: -7.5vw;
+    left: 1vw;
+}
+
+/*  Letter ----------------------- */
+
+.hiddenletter-container {
+    position: relative;
+    height: 100vw;
+    width: 100vw;
+    margin-bottom: 10vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.hiddenmessage {
+    position: relative;
+    height: 100%;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#drawingCanvas {
+    position: absolute;
+    top: 0vw;
+    /* Fixing top value */
+    left: 0;
+    z-index: 8;
+    /* Above the letter */
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+    border-radius: 7.8vw;
+    /* 30px to vw */
+}
+
+#controls {
+    font-size: 2vw;
+    color: #e2e9e4;
+    margin: 0;
+    position: relative;
+    top: 10vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    opacity: 0;
+    /* Start with hidden controls */
+    transition: opacity 0.5s ease;
+    /* Smooth transition for opacity */
+    z-index: 10;
+}
+
+.hiddenletter-container:hover #controls {
+    opacity: 1;
+    /* Show controls when hovering over the hiddenletter-container */
+}
+
+.Border {
+    z-index: 5;
+    position: relative;
+    border-radius: 7.8vw;
+    /* 30px to vw */
+    overflow: hidden;
+    /* Prevent any overflow */
+    display: flex;
+    /* Use flexbox to center the letter inside */
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+    /* Padding to hug the .letter */
+    box-sizing: border-box;
+    background-image: url('texture.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10vw;
+}
+
+.letter {
+    z-index: 7;
+    position: relative;
+    border-radius: 7.8vw;
+    /* 30px to vw */
+    background-color: #2a3b35;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.87vw;
+    /* 24px to vw */
+    color: #e2e9e4;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    display: inline-block;
+    width: 100%;
+    padding: 2vw;
+    box-sizing: border-box;
+    height: auto;
+}
+
+#letter-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3vw 2vw;
+    font-size: 1.5vw ;
+}
+
+#letter-header {
+    display: flex;
+    justify-content: space-between;
+    /* Pushes the date to the left and Tem to the right */
+    align-items: flex-start;
+}
+
+.Tem {
+    width: 15vw;
+    /* 30% of the letter width */
+    align-self: flex-end;
+    /* Aligns the Tem to the top-right of the letter */
+    margin-left: auto;
+    /* Ensures Tem stays on the right side */
+}
+
+#Date {
+    margin-bottom: 5.2vw;
+    /* Space between the date and the rest of the content */
+    padding: 0 0vw;
+    font-size: 1.87vw;
+    /* 24px to vw */
+    color: #e2e9e4;
+    font-size: 1.5vw;
+    position: relative;
+    top: 5vh;
+}
+
+#Dear {
+    line-height: 140%;
+    padding: 0 2vw;
+    margin-bottom: 10.4vw;
+    /* 4vw to vw */
+    font-size: 1.87vw;
+    /* 24px to vw */
+    color: #e2e9e4;
+}
+
+#Sign {
+    margin-top: 0;
+    /* 2vw to vw */
+    padding: 0 1vw;
+    align-self: flex-start;
+    /* Aligns the signature to the start (left) */
+    width: 15vw;
+}
+
+#Money {
+    margin-top: 1vw;
+    /* 2vw to vw */
+    padding: 0 0vw;
+    font-size: 1.87vw;
+    /* 24px to vw */
+    line-height: 140%;
+    color: #e2e9e4;
+    font-size: 1.5vw;
+}
+
+.Selfmessage {
+    position: relative;
+    height: 80vw;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.Board {
+    z-index: 7;
+    position: relative;
+    border-radius: 6vw;
+    /* 30px to vw */
+    background-color: #2A3B35;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    padding: 2vw;
+    box-sizing: border-box;
+    height: 25vw;
+}
+
+.Selfmessagetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.6vw;
+    /* 10px to vw */
+    text-align: center;
+    position: relative;
+    top: 5vw;
+}
+
+.pencilicon {
+    display: flex;
+    align-items: center;
+}
+
+
+
+#controlpanel {
+    margin-bottom: 2.6vw;
+    /* 10px to vw */
+    display: flex;
+    gap: 2.6vw;
+    /* 10px to vw */
+    align-items: center;
+    position: relative;
+    left: 30vw;
+    top: 7vw;
+    color: #e2e9e4;
+}
+
+.color-picker {
+    padding: 0.5vw;
+    /* 5px to vw */
+    border: 0.26vw solid #ccc;
+    /* 1px to vw */
+    border-radius: 1.3vw;
+    /* 5px to vw */
+    outline: none;
+    cursor: pointer;
+    font-size: 4vw;
+    width: 10vw;
+    height: 3vw;
+}
+
+label {
+    font-size: 1.5vw;
+
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+    display: block;
+}
+
+#saveButton {
+    position: relative;
+    left: -30vw;
+}
+
+/* General arrow button styles */
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 1000;
+    display: none;
+    /* Hidden by default */
+}
+
+/* Position the left arrow */
+.arrow-left {
+    left: 10px;
+}
+
+/* Position the right arrow */
+.arrow-right {
+    right: 10px;
+}
+
+
+
+.arrow-left,
+.arrow-right {
+    display: none;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-device-width: 1024px) {
+
+    .arrow-left,
+    .arrow-right {
+        display: block;
+    }
+
+    .nav-bar-button {
+        font-size: 1.5vw;
+        /* Increase font size slightly for tablets */
+    }
+
+    .logo {
+        width: 12vw;
+        /* Adjust logo size for tablets */
+    }
+
+    .nav-bar {
+        padding: 0 4vw 0 0vw;
+    }
+
+    .button-outline,
+    #saveButton {
+        position: relative;
+        border-radius: 2.5vw;
+        /* 25px to vw */
+        border: 0.5vw solid #e2e9e4;
+        /* 4px to vw */
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 1vw 2.5vw;
+        /* 20px to vw */
+        margin: 0 auto;
+        /* Center align horizontally */
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Smooth transition */
+        font-size: 2.5vw;
+        color: #e2e9e4;
+    }
+
+    #scroll-back-btn {
+        position: relative;
+        left: 31vw;
+        top: 10vw;
+    }
+
+    .intro {
+        position: relative;
+        top: 0vw;
+        height: 80vh;
+        width: 100vw;
+        margin-bottom: 10vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .scrollintro {
+        height: 70vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        white-space: nowrap;
+        /* Prevents wrapping of sections */
+        padding: 0;
+    }
+
+    .section {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 75vw;
+        top: 20vw;
+        width: 23vw;
+        height: 12vw;
+        ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.95vw;
+        /* 15px to vw */
+        box-shadow: 0vw 1.04vw 2.08vw rgba(0, 0, 0, 0.2);
+        /* 0 4px 8px */
+        font-size: 1.87vw;
+        /* 24px to vw */
+        transform: translateX(0) translateY(0) scale(0.1);
+        transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+
+
+    .section img,
+    .section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the image covers the entire div while maintaining aspect ratio */
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0.6vw;
+    }
+
+    #section3,
+    #section4 {
+        width: 23vw;
+        height: 12vw;
+    }
+
+    #section5 , #section6 {
+        width: 23vw;
+        height: 12vw;
+    }
+
+    #section7 {
+        position: absolute;
+        left: 72vw;
+        top: 20vw;
+        width: 30vw;
+        height: 20vw;
+    }
+
+    .section.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0) translateY(0) scale(2.5);
+    }
+
+    .section.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Default styling for sections before scrolling */
+    .section {
+        transform: translateX(0) translateY(0) scale(1);
+        opacity: 1;
+        /* Ensure visibility */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        /* Smooth transition when scrolling */
+        position: absolute;
+        left: 60vw;
+        top: 25vh;
+    }
+
+    /* Hide headlines initially */
+    .headline {
+        opacity: 0;
+        /* Hide headlines by default */
+        transform: translateY(20px);
+        /* Position headlines slightly below */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        /* Smooth transition when scrolling */
+    }
+
+    /* Customize the first section and headline to be fully visible initially */
+    .section.active {
+        transform: scale(1.7);
+        /* Adjust based on the desired initial scale */
+        opacity: 1;
+
+    }
+
+    .headline.active {
+        opacity: 1;
+        /* Make the first headline visible */
+        transform: translateY(0);
+        /* Align the headline properly */
+    }
+
+
+    .headline {
+        font-size: 4vw;
+        color: #e2e9e4;
+        margin: 0;
+        padding: 0vw 15vw;
+        opacity: 0;
+        transform: translateY(2.6vw);
+        /* 20px to vw */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        /* Smooth transition for both position and opacity */
+        position: absolute;
+        left: 10vw;
+        top: 45vw;
+        height: 15vw;
+        text-align: left;
+    }
+
+    #headline1 {
+        position: absolute;
+        left: 10vw;
+        top: 65vw;
+        height: 15vw;
+        text-align: left;
+    }
+
+    #headline2 {
+        position: absolute;
+        left: 20vw;
+        top: 65vw;
+        height: 15vw;
+        text-align: left;
+
+    }
+
+    #headline3 {
+        position: absolute;
+        left: 12vw;
+        top: 65vw;
+        height: 15vw;
+        text-align: left;
+    }
+
+    #headline4 {
+        position: absolute;
+        left: 15vw;
+        top: 65vw;
+        height: 15vw;
+        text-align: left;
+    }
+
+    #headline5 {
+        position: absolute;
+        left: 10vw;
+        top: 65vw;
+        height: 15vw;
+        text-align: left;
+    }
+
+
+    #headline6 {
+        position: absolute;
+        left: 9vw;
+        top: 65vw;
+        height: 15vw;
+        text-align: left;
+    }
+
+    #headline7 {
+        position: absolute;
+        left: -6.5vw;
+        top: 60vw;
+        height: 20vw;
+        text-align: left;
+        width: 20vw;
+    }
+
+    #start-text {
+        font-size: 3vw;
+        color: #e2e9e4;
+        margin: 0;
+        position: relative;
+        top: -11vh;
+        left: -15%;
+        transform: translateX(-50%);
+        opacity: 0.5;
+        animation: fadeInOut 2.5s;
+        animation-iteration-count: infinite;
+    }
+
+    p {
+        position: relative;
+        font-size: 2vw;
+        display: flex;
+        color: #e2e9e4;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        padding: 0vw 2vw;
+        margin: 0;
+    }
+
+    /*  CV ----------------------- */
+
+    .CV {
+        margin: 10vw 5vw;
+        padding: 5vw 5vw 5vw 8vw;
+        align-items: center;
+        justify-items: center;
+    }
+
+    h2 {
+        position: relative;
+        font-size: 3vw;
+        display: flex;
+        color: #e2e9e4;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        padding: 0vw 2vw;
+        margin: 0;
+    }
+
+    .CV p {
+        font-size: 2vw;
+    }
+
+    .CVcontainer {
+        width: 20vw;
+    }
+
+
+    .CVcontainer2 {
+        width: 50vw;
+        position: relative;
+    left: -2vw;
+    }
+
+    .Education {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2vw;
+        text-align: left;
+        color: #e2e9e4;
+    }
+
+    .Education h2 {
+        position: relative;
+        top: -1vw;
+    }
+
+    .Skill {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 13vw;
+        text-align: left;
+        color: #e2e9e4;
+        margin: 10vw 0vw;
+    }
+
+    .Skill h2 {
+        position: relative;
+        top: 0vw;
+        left: 1vw;
+        height: 10vw;
+    }
+
+    .Iconcontainer {
+        display: flex;
+        flex-direction: column;
+        /* Ensure images are stacked vertically */
+        align-items: flex-start;
+        /* Align images to the left */
+        gap: 1vw;
+        /* 10px to vw */
+        padding-left: 4vw;
+        position: relative;
+        left: -4vw;
+    }
+
+    .Softwareicon {
+        width: 7vw;
+        /* 100px to vw */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin: 2.6vw 0;
+    }
+
+    .Softwarecontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11vw;
+        padding: 5vw 0vw 0vw;
+        position: relative;
+        left: -15vw;
+    }
+
+    .Softwareicon2 {
+        width: 6vw;
+        /* 90px to vw */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin: 2.7vw 0;
+        position: relative;
+        top: 0vw;
+    }
+
+    .Softwarecontainer2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11vw;
+        padding: 5vw 0vw 0vw;
+        position: relative;
+        top: 0vw;
+        left: -34vw;
+    }
+
+    .Iconcontainer2 {
+        display: flex;
+        flex-direction: column;
+        /* Ensure images are stacked vertically */
+        align-items: flex-start;
+        /* Align images to the left */
+        gap: 1vw;
+        /* 10px to vw */
+        position: relative;
+        left: -25vw;
+    }
+
+    .Language {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 7vw;
+        text-align: left;
+        color: #e2e9e4;
+        margin: 10vw 0vw;
+    }
+
+    .CVcontainer3 {
+        position: relative;
+        left: 6.5vw;
+    }
+
+    .Language h2 {
+        position: relative;
+        top: -4.3vw;
+        left: 1vw;
+    }
+
+    .CVcontainer4 {
+        position: relative;
+        left: -2vw;
+    }
+
+
+    footer {
+        padding-bottom: 5vh;
+    }
+
+
+    /*  Letter ----------------------- */
+
+    .hiddenletter-container {
+        position: relative;
+        height: 100vw;
+        width: 100vw;
+        margin-bottom: 20vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .hiddenmessage {
+        position: relative;
+        height: 100%;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #drawingCanvas {
+        position: absolute;
+        top: 0vw;
+        /* Fixing top value */
+        left: 0;
+        z-index: 8;
+        /* Above the letter */
+        width: 100%;
+        height: 100%;
+        cursor: crosshair;
+        border-radius: 3vw;
+        /* 30px to vw */
+    }
+
+    #controls {
+        font-size: 2.5vw;
+        color: #e2e9e4;
+        margin: 0;
+        position: relative;
+        top: 20vh;
+        left: 50vw;
+        transform: translateX(-50%);
+        opacity: 1;
+        /* Start with hidden controls */
+        z-index: 10;
+    }
+
+    .Border {
+        z-index: 5;
+        position: relative;
+        border-radius: 7.8vw;
+        /* 30px to vw */
+        overflow: hidden;
+        /* Prevent any overflow */
+        display: flex;
+        /* Use flexbox to center the letter inside */
+        justify-content: center;
+        align-items: center;
+        padding: 3vw;
+        /* Padding to hug the .letter */
+        box-sizing: border-box;
+        background-image: url('texture.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 5vw 10vw;
+    }
+
+    .letter {
+        z-index: 7;
+        position: relative;
+        border-radius: 6vw;
+        /* 30px to vw */
+        background-color: #2a3b35;
+        overflow: hidden;
+        text-align: left;
+        font-size: 1.87vw;
+        /* 24px to vw */
+        color: #e2e9e4;
+        font-family: 'Inter', sans-serif;
+        font-style: italic;
+        display: inline-block;
+        width: 100%;
+        padding: 2vw;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    #letter-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2vw 3vw;
+    }
+
+    #letter-header {
+        display: flex;
+        justify-content: space-between;
+        /* Pushes the date to the left and Tem to the right */
+        align-items: flex-start;
+    }
+
+    .Tem {
+        width: 20vw;
+        /* 30% of the letter width */
+        align-self: flex-end;
+        /* Aligns the Tem to the top-right of the letter */
+        margin-left: auto;
+        /* Ensures Tem stays on the right side */
+    }
+
+    #Date {
+        margin-bottom: 5.2vw;
+        /* Space between the date and the rest of the content */
+        padding: 2vw;
+        font-size: 1.87vw;
+        /* 24px to vw */
+        color: #e2e9e4;
+    }
+
+    #Dear {
+        line-height: 140%;
+        padding: 0 2vw;
+        margin-bottom: 10.4vw;
+        /* 4vw to vw */
+        font-size: 1.87vw;
+        /* 24px to vw */
+        color: #e2e9e4;
+    }
+
+    #Sign {
+        margin-top: 1vw;
+        /* 2vw to vw */
+        padding: 0 2vw;
+        align-self: flex-start;
+        /* Aligns the signature to the start (left) */
+    }
+
+    #Money {
+        margin-top: 1vw;
+        /* 2vw to vw */
+        padding: 0 2vw;
+        font-size: 1.87vw;
+        /* 24px to vw */
+        line-height: 140%;
+        color: #e2e9e4;
+    }
+
+    .Selfmessage {
+        position: relative;
+        height: 100vw;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding: 0;
+
+        .Board {
+            z-index: 7;
+            position: relative;
+            border-radius: 5.5vw;
+            /* 30px to vw */
+            background-color: #2A3B35;
+            overflow: hidden;
+            text-align: left;
+            width: 100%;
+            padding: 2vw;
+            box-sizing: border-box;
+            height: 50vw;
+        }
+
+        .Selfmessagetitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+            /* 10px to vw */
+            text-align: center;
+            position: relative;
+            top: -5vw;
+        }
+
+        .pencilicon {
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        #controlpanel {
+            margin-bottom: 0vw;
+            /* 10px to vw */
+            display: flex;
+            gap: 2.6vw;
+            /* 10px to vw */
+            align-items: center;
+            position: relative;
+            left: 33vw;
+            top: -2vw;
+            color: #e2e9e4;
+        }
+
+        .color-picker {
+            font-size: 2vw;
+            padding: 0.7vw;
+            /* 5px to vw */
+            border: 0.05vw solid #e2e9e4;
+            /* 1px to vw */
+            border-radius: 1.3vw;
+            /* 5px to vw */
+            outline: none;
+            cursor: pointer;
+            width: 20vw;
+            height: 5vw;
+        }
+
+        label {
+            font-size: 2vw;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            cursor: crosshair;
+            display: block;
+        }
+
+        #saveButton {
+            position: relative;
+            left: -50vw;
+            top: 75vw;
+        }
+
+
+
+    }
+
+}
+
+    @media screen and (max-device-width: 768px) {
+
+        .nav-bar {
+            position: sticky;
+        }
+    
+        .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #131b18;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end; /* Align to the right */
+        transform: translateX(100%); /* Start off-screen to the right */
+        transition: transform 0.5s ease-in-out; /* Smooth slide-in effect */
+        z-index: 999;
+        visibility: hidden; /* Hidden initially */
+    }
+    
+    .nav-links.active {
+        transform: translateX(0); /* Slide in when active */
+        visibility: visible;
+    }
+        
+    .nav-bar-button {
+        font-size: 5vw;
+    
+    }
+    
+    .nav-bar-link {
+        margin: 10vh 10vw 10vh 0;
+        font-size: 2vw; /* Adjust for larger buttons */
+        text-align: center; /* Center the text */
+        width: 100%; /* Ensure the links take up the full width */
+        padding-right: 50vw;
+    }
+   
+        .hamburger-menu {
+            display: flex;
+        }
+    
+    
+    /* Active state of the nav-links when hamburger is clicked */
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background-color: #131b18;
+        height: 75vh;
+        padding: 20vw 0vw 40vw;
+        
+    }
+    
+    
+    .parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 2vw; 
+    }
+    
+      
+        
+        #lightmode {
+            order: 1;
+            font-size: 4vw; 
+            margin-right: 55vw; 
+        }
+        
+        .logo {
+            order: 2;
+            margin: 0 auto; 
+            transform: translateX(-50%); 
+            left: 50%;
+            position: absolute; 
+            top: 10%;
+            width: 25vw;
+        }
+        
+        .hamburger-menu {
+            order: 3;
+            display: block;
+            cursor: pointer;
+            z-index: 1001;
+            width: 10vw; 
+        }
+
+
+        #start-text {
+            display: none;
+        }
+
+        #scroll-back-btn {
+            position: relative;
+            left: 31vw;
+            top: 10vw;
+        }
+    
+        .intro {
+            position: relative;
+            top: 0vw;
+            height: 60vh;
+            width: 100vw;
+            margin-bottom: 10vw;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            padding-bottom: 50vw;
+        }
+    
+        .scrollintro {
+            height: 70vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            white-space: nowrap;
+            /* Prevents wrapping of sections */
+            padding: 0;
+        }
+    
+        .section {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            left: 75vw;
+            top: 20vw;
+            width: 23vw;
+            height: 12vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1.95vw;
+            /* 15px to vw */
+            box-shadow: 0vw 1.04vw 2.08vw rgba(0, 0, 0, 0.2);
+            /* 0 4px 8px */
+            font-size: 1.87vw;
+            /* 24px to vw */
+            transform: translateX(0) translateY(0) scale(0.1);
+            transition: transform 0.1s ease, opacity 0.1s ease;
+        }
+    
+            #section1, #section2, #section3, #section4, #section5, #section6 {
+                width: 45vw;
+                height: 30vw;
+                position: absolute;
+                top: 40vw;
+                left: 27.5vw;
+            }
+
+
+        .section img,
+        .section video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image covers the entire div while maintaining aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 0.6vw;
+        }
+
+    
+        #section7 {
+            position: absolute;
+            left: 25vw;
+            top: 35vw;
+            width: 60vw;
+            height: 40vw;
+        }
+    
+        .section.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0) translateY(0) scale(2.5);
+        }
+    
+        .section.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    
+        /* Default styling for sections before scrolling */
+        .section {
+            transform: translateX(0) translateY(0) scale(1);
+            opacity: 1;
+            /* Ensure visibility */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            /* Smooth transition when scrolling */
+            position: absolute;
+            left: 60vw;
+            top: 25vh;
+        }
+    
+        /* Hide headlines initially */
+        .headline {
+            opacity: 0;
+            /* Hide headlines by default */
+            transform: translateY(20px);
+            /* Position headlines slightly below */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            /* Smooth transition when scrolling */
+        }
+    
+        /* Customize the first section and headline to be fully visible initially */
+        .section.active {
+            transform: scale(1.7);
+            /* Adjust based on the desired initial scale */
+            opacity: 1;
+    
+        }
+    
+        .headline.active {
+            opacity: 1;
+            /* Make the first headline visible */
+            transform: translateY(0);
+            /* Align the headline properly */
+        }
+    
+    
+        .headline {
+            font-size: 4vw;
+            color: #e2e9e4;
+            margin: 0;
+            padding: 0vw 15vw;
+            opacity: 0;
+            transform: translateY(2.6vw);
+            /* 20px to vw */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            /* Smooth transition for both position and opacity */
+            position: absolute;
+            left: 10vw;
+            top: 45vw;
+            height: 15vw;
+            text-align: left;
+        }
+    
+        #headline1,  #headline2, #headline3,  #headline4,  #headline5, #headline6 {
+            position: absolute;
+            left: 8vw;
+            top: 50vh;
+            height: 15vw;
+            text-align: left;
+        }
+        
+    
+        #headline7 {
+            position: absolute;
+            left: 1vw;
+            top: 47.5vh;
+            height: 20vw;
+            text-align: left;
+            width: 10vw;
+            padding: 0vw 5vw;
+        }
+
+
+
+        .button-outline {
+            position: relative;
+            border-radius: 3vw; /* 25px to vw */
+            border: 0.5vw solid #e2e9e4; /* 4px to vw */
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            padding: 2vw 5vw; /* 20px to vw */
+            margin: 0 auto; /* Center align horizontally */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            color: #e2e9e4;
+        }
+        
+        
+        .button-p, #scroll-back-btn, #saveButton {
+            font-size: 4vw;
+            text-align: center;
+            margin-top: 5vw;
+            padding: 2vw 5vw;
+            line-height: 1;
+            transition: color 0.3s ease; 
+            position: relative;
+            left: 28vw;
+        }
+
+
+        .button-outline:hover {
+            background-color: #131b18;
+            /* Fill background on hover */
+            color: #e2e9e4;
+        }
+         
+
+     
+        
+        /*  CV ----------------------- */
+
+    .CV {
+        margin: 10vw 10vw;
+        padding: 5vw 0vw;
+        align-items: center;
+        justify-items: center;
+        height: 80vh;
+    }
+
+    h2 {
+        position: relative;
+        font-size: 5vw;
+        display: flex;
+        color: #e2e9e4;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        padding: 0vw;
+        margin: 0;
+
+    }
+
+    .CV p {
+        font-size: 3.5vw;
+        width: 40vw;
+    }
+
+    .CVcontainer {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+        position: relative;
+        left: -35vw;
+        margin-top: 5vw;
+    }
+    
+    .CVcontainer2 {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+        white-space: nowrap; 
+        position: relative;
+        left: -50vw;
+        margin-top: 5vw;
+
+    }
+
+    .Education {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2vw;
+        text-align: left;
+        color: #e2e9e4;
+    }
+
+    .Education h2 {
+        position: relative;
+        top: -10vw;
+        left: 25vw;
+
+    }
+
+    .Skill {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 5vw;
+        text-align: left;
+        color: #e2e9e4;
+        margin: 20vw 0vw;
+    }
+
+    .Skill h2 {
+        position: relative;
+        top: -10vw;
+        left: 32.5vw;
+        text-align: center;
+
+    }
+
+    .Iconcontainer {
+        display: flex;
+        flex-direction: column;
+        /* Ensure images are stacked vertically */
+        align-items: flex-start;
+        /* Align images to the left */
+        gap: 2.5vw;
+        /* 10px to vw */
+        padding-left: 0vw;
+        position: relative;
+        left: -15vw;
+        top: 1vw;
+    }
+
+    .Softwareicon {
+        width: 7vw;
+        /* 100px to vw */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin: 2.6vw 0;
+    }
+
+    .Softwarecontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11vw;
+        padding: 5vw 0vw 0vw;
+        position: relative;
+        left: -15vw;
+    }
+
+    .Softwareicon2 {
+        width: 6vw;
+        /* 90px to vw */
+        height: auto;
+        /* Maintain aspect ratio */
+        margin: 2.7vw 0;
+        position: relative;
+        top: 0vw;
+    }
+
+    .Softwarecontainer2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 11vw;
+        padding: 5vw 0vw 0vw;
+        position: relative;
+        top: 0vw;
+        left: -34vw;
+    }
+
+    .Iconcontainer2 {
+        display: flex;
+        flex-direction: column;
+        /* Ensure images are stacked vertically */
+        align-items: flex-start;
+        /* Align images to the left */
+        gap: 2.5vw;
+        /* 10px to vw */
+        position: relative;
+        top: 1.5vw;
+        left: -35vw;
+    }
+
+    .Language {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 7vw;
+        text-align: left;
+        color: #e2e9e4;
+        margin: 10vw 0vw;
+    }
+
+    .CVcontainer3 {
+        position: relative;
+        left: -38vw;
+        top: 5vw;
+    }
+
+    .Language h2 {
+        position: relative;
+        top: -15vw;
+        left: 28vw;
+        text-align: center;
+    }
+
+    .CVcontainer4 {
+        position: relative;
+        left: -18vw;
+        top: 5vw;
+    }
+
+
+     footer .nav-bar-button {
+        font-size: 4vw;
+        height: auto;
+    }
+
+    footer b, #MoneyLe {
+        position: relative;
+       left: -12vw;
+        width: 50vw; 
+      }
+
+      footer {
+        display: flex;
+        gap: 2vw;
+        width: 100%;
+        height: 20vh;
+        z-index: 500;
+      }
+
+
+
+
+
+
+    /*  Letter ----------------------- */
+
+    #selectBrush {
+        display: block;
+    }
+
+    .hiddenletter-container {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        margin-bottom: 20vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .hiddenmessage {
+        position: relative;
+        height: 100%;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #drawingCanvas {
+        position: absolute;
+        top: 0vw;
+        /* Fixing top value */
+        left: 0;
+        z-index: 8;
+        /* Above the letter */
+        width: 100%;
+        height: 100%;
+        cursor: crosshair;
+        border-radius: 3vw;
+        /* 30px to vw */
+    }
+
+    #controls {
+        font-size: 4vw;
+        color: #e2e9e4;
+        margin: 0;
+        position: relative;
+        top: 15vh;
+        left: 50vw;
+        transform: translateX(-50%);
+        opacity: 1;
+        z-index: 1000;
+        height: 4vw;
+    }
+
+    .Border {
+        z-index: 5;
+        position: relative;
+        border-radius: 7.8vw;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3vw;
+        box-sizing: border-box;
+        background-image: url('texture.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 5vw 10vw;
+    }
+    
+    .letter {
+        z-index: 7;
+        position: relative;
+        border-radius: 6vw;
+        background-color: #2a3b35;
+        overflow: hidden;
+        text-align: left;
+        font-size: 3.5vw;
+        line-height: 140%;
+        color: #e2e9e4;
+        font-family: 'Inter', sans-serif;
+        font-style: italic;
+        display: inline-block;
+        width: 100%;
+        padding: 4vw 0vw;  /* Adjusted padding for better side spacing */
+        box-sizing: border-box;
+        height: auto;
+
+    }
+    
+    .letter-content p {
+        padding: 0vw 4vw;
+    }
+    
+    #letter-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6vw 3vw;  /* Adjusted padding to match the letter padding */
+    }
+    
+    #letter-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .Tem {
+        width: 20vw;
+        align-self: flex-end;
+        margin-left: auto;
+        position: relative;
+        top: -5vw;
+        left: 4vw;
+    }
+    
+    #Date {
+        margin-bottom: 5.2vw;
+        color: #e2e9e4;
+        text-align: left;
+        font-size: 3.5vw;
+    }
+    
+    #Dear {
+        line-height: 140%;
+        margin-bottom: 10.4vw;
+        color: #e2e9e4;
+    }
+    
+    #Sign {
+        height: auto;
+        width: 50vw;
+        margin-top: 1vw;
+        padding: 0vw 10vw 0 0;
+        align-self: flex-start;
+    }
+    
+    #Money {
+        font-size: 3.5vw;
+        margin-top: 1vw;
+        line-height: 140%;
+        color: #e2e9e4;
+    }
+    
+
+
+/* message ----------------*/ 
+
+
+    .Selfmessage {
+        position: relative;
+        height: 90vh;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding: 0;
+        top: -5vh; }
+
+        .Board {
+            z-index: 7;
+            position: relative;
+            border-radius: 5.5vw;
+            /* 30px to vw */
+            background-color: #2A3B35;
+            overflow: hidden;
+            text-align: left;
+            width: 100%;
+            padding: 2vw;
+            box-sizing: border-box;
+            height: 50vh;
+            position: relative;
+        }
+
+        .Selfmessagetitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3vw;
+            /* 10px to vw */
+            text-align: center;
+            position: relative;
+            top: -10vw;
+        }
+
+        .pencilicon {
+            display: flex;
+            align-items: center;
+            height: auto;
+            width: 5vw;
+        }
+
+
+
+        #controlpanel {
+            margin-bottom: 0vw;
+            /* 10px to vw */
+            display: flex;
+            gap: 2.6vw;
+            /* 10px to vw */
+            align-items: center;
+            position: relative;
+            left: 28vw;
+            top: -10vw;
+            color: #e2e9e4;
+        }
+
+        .color-picker {
+            font-size: 2vw;
+            padding: 0.7vw;
+            /* 5px to vw */
+            border: 0.05vw solid #e2e9e4;
+            /* 1px to vw */
+            border-radius: 1.3vw;
+            /* 5px to vw */
+            outline: none;
+            cursor: pointer;
+            width: 20vw;
+            height: 5vw;
+        }
+
+        label {
+            font-size: 4vw;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            cursor: crosshair;
+            display: block;
+        }
+
+        #saveButton {
+            position: relative;
+            left: -50vw;
+            top: 68vh;
+        }
+
+
+
+    }
+
+
+

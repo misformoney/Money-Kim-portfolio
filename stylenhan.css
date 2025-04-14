@@ -1,0 +1,521 @@
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #131b18;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    text-align: center;
+    font-size: 3vh;
+    color: rgba(226, 233, 228, 0.5);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    min-height: 100vh; /* Ensure body takes full height of viewport */
+}
+
+.light-mode {
+    filter: invert(1);
+    background-color: #EBE4E7;
+    color: #131b18;
+}
+
+.light-mode .work-container:hover {
+    filter: invert(1); /* Revert the inversion when hovering */
+    transition: filter 0.3s ease-in-out;
+}
+
+.light-mode img {
+    filter: invert(1);
+}
+
+.light-mode video {
+    filter: invert(1);
+}
+
+.light-mode .logo {
+    filter: none;
+}
+
+/* Nav bar */
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.8vw 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(180deg, rgba(64, 91, 81, 0.5) 0%, rgba(19, 27, 24, 0) 100%);
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 8vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav-bar-button {
+    font-size: 1.05vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-bar-button:hover {
+    text-decoration: underline; 
+}
+
+
+.nav-bar-link {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.button-outline {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    gap: 3vw; /* Adjusted gap to reduce excessive spacing */
+    padding: 0 2vw; /* Ensures even padding on both sides of the buttons */
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #e2e9e4;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.work-link{
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+
+
+/* Styling for the showcase section */
+.showcase {
+    display: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 10vw 0vw;
+    height: auto;
+}
+
+.showcase img, .showcase video {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+}
+
+.showcase video {
+    max-height: 100%; /* Limit the height of the video */
+    object-fit: cover;
+}
+
+.Work-title {
+    z-index: 5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    position: relative;
+    top: -5vw;
+    overflow: hidden;
+}
+
+/* Create a pseudo-element for the background image */
+.Work-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bannerNhan.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1; /* Ensure the background is behind the content */
+}
+
+h1 {
+    position: relative;
+    font-size: 5vw;
+    width: 40vw;
+    color: #e2e9e4;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin: 1vw;
+}
+
+h2 {
+    font-size: 3.33vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0 0 1.5vw 0; 
+}
+
+p {
+    font-size: 2vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0;
+}
+
+/* footer */
+
+
+footer {
+    cursor: pointer;
+    width: 100%;
+    height: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(0deg, rgba(64, 91, 81, 0.5) 50%, rgba(19, 27, 24, 0) 100%);
+    z-index: 1000;
+    padding-bottom: 10vw;
+}
+
+
+@media screen and (max-device-width: 1024px) {
+
+    .nav-bar-button {
+        font-size: 1.5vw; /* Increase font size slightly for tablets */
+    }
+
+    .logo {
+        width: 12vw; /* Adjust logo size for tablets */
+    }
+
+    .nav-bar {
+        position: sticky;
+        padding: 0 5vw 0 1vw; /* Adjust padding to ensure space distribution */
+    }
+
+    
+ /* Styling for the showcase section */
+.showcase {
+    display: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw 10vw 0vw;
+    height: auto;
+    position: relative;
+    top: -16vw;
+}
+
+.showcase img, .showcase video {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+}
+
+.showcase video {
+    max-height: 100%; /* Limit the height of the video */
+    object-fit: cover;
+}
+
+.Work-title {
+    z-index: 5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    width: 100vw; /* Full width */
+    height: 50vh; /* Full height */
+    position: relative;
+    top: -20vw;
+    overflow: hidden;
+}
+
+/* Create a pseudo-element for the background image */
+.Work-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bannerNhan.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1; /* Ensure the background is behind the content */
+}
+
+h1 {
+    position: relative;
+    font-size: 5vw;
+    width: 40vw;
+    color: #e2e9e4;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin: 1vw;
+}
+
+h2 {
+    font-size: 3.33vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0 0 1.5vw 0; 
+}
+
+p {
+    font-size: 2vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0;
+}
+
+
+    footer {
+        padding-bottom: 6vh;
+    }
+
+}
+
+@media screen and (max-device-width: 768px) {
+
+
+    /* PHONE NAVBAR --------------------*/
+
+
+    .nav-bar {
+        position: sticky;
+    }
+
+    .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #131b18;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align to the right */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.5s ease-in-out; /* Smooth slide-in effect */
+    z-index: 999;
+    visibility: hidden; /* Hidden initially */
+}
+
+.nav-links.active {
+    transform: translateX(0); /* Slide in when active */
+    visibility: visible;
+}
+    
+.nav-bar-button {
+    font-size: 5vw;
+
+}
+
+.nav-bar-link {
+    margin: 10vh 0vw 10vh ;
+    font-size: 2vw; /* Adjust for larger buttons */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure the links take up the full width */
+    padding-right: 0vw;
+    z-index: 1000;
+}
+  
+   
+    .hamburger-menu {
+        display: flex;
+    }
+
+
+/* Active state of the nav-links when hamburger is clicked */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: #131b18;
+    height: 75vh;
+    padding: 20vw 5vw 40vw 0vw;
+    margin: 0;
+    
+}
+
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2vw; 
+}
+
+#lightmode {
+    order: 1;
+    font-size: 4vw; 
+    margin-right: 55vw; 
+}
+
+.logo {
+    order: 2;
+    margin: 0 auto; 
+    transform: translateX(-50%); 
+    left: 50%;
+    position: absolute; 
+    top: 10%;
+    width: 25vw;
+}
+
+.hamburger-menu {
+    order: 3;
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+    width: 10vw; 
+}
+
+/*-----------------------------------*/ 
+
+/* Styling for the showcase section */
+
+.showcase {
+    display: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0vw 10vw 0vw;
+    height: auto;
+    position: relative;
+    top: -10vw;
+}
+
+.showcase img, .showcase video {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a slight shadow */
+}
+
+.showcase video {
+    max-height: 100%; /* Limit the height of the video */
+    object-fit: cover;
+}
+
+.Work-title {
+    z-index: 5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    width: 100vw; /* Full width */
+    height: 60vh; /* Full height */
+    position: relative;
+    top: -20vw;
+    overflow: hidden;
+}
+
+/* Create a pseudo-element for the background image */
+.Work-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bannerNhan.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1; /* Ensure the background is behind the content */
+}
+
+h1 {
+    position: relative;
+    font-size: 10vw;
+    width: 40vw;
+    color: #e2e9e4;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0;
+    margin: 1vw;
+    top: 0vw;
+}
+
+h2 {
+    font-size: 7vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0 0 1.5vw 0; 
+    position: relative;
+    top: 0vw;
+}
+
+p {
+    font-size: 2vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0;
+}
+
+
+
+
+
+    footer .nav-bar-button {
+        font-size: 4vw;
+        height: auto;
+    }
+
+    footer b, #MoneyLe {
+        position: relative;
+       left: -12vw;
+        width: 50vw; 
+      }
+
+      footer {
+        display: flex;
+        gap: 2vw;
+        width: 100%;
+        height: 20vh;
+      }
+
+}

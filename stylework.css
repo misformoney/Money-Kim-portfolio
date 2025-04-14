@@ -1,0 +1,1114 @@
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #131b18;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    text-align: center;
+    font-size: 3vh;
+    color: rgba(226, 233, 228, 0.5);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    min-height: 100vh; /* Ensure body takes full height of viewport */
+}
+
+.light-mode {
+    filter: invert(1);
+    background-color: #EBE4E7;
+    color: #131b18;
+}
+
+.light-mode img {
+    filter: invert(1);
+}
+
+.light-mode video {
+    filter: invert(1);
+}
+
+
+.light-mode .work-container:hover {
+    filter: invert(1); /* Revert the inversion when hovering */
+    transition: filter 0.3s ease-in-out;
+}
+
+/* Nav bar */
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.8vw 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(180deg, rgba(64, 91, 81, 0.5) 0%, rgba(19, 27, 24, 0) 100%);
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 8vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav-bar-button {
+    font-size: 1.05vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-bar-button:hover {
+    text-decoration: underline; 
+}
+
+
+.nav-bar-link {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.button-outline {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    gap: 3vw; /* Adjusted gap to reduce excessive spacing */
+    padding: 0 2vw; /* Ensures even padding on both sides of the buttons */
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #e2e9e4;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.work-link{
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+
+/*Section 1*/ 
+
+.Section-container {
+    position: relative;
+    height: 50vw;
+    width: 100vw;
+    margin-bottom: 10vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.Section-container3 {
+    position: relative;
+    height: 28vw;
+    width: 100vw;
+    margin-bottom: 10vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.workcontainer {
+    position: relative;
+    height: 50vw;
+    width: 100vw;
+    margin-bottom: 10vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 0vw;
+    margin: 0vw 10vw;
+    padding: 0vw 5vw;
+}
+
+.Work-content1 {
+    position: relative;
+    top: -5vw;
+    left: -43vw;
+    width: 30vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+.Work-content2 {
+    position: relative;
+    top: -5vw;
+    left: -5vw;
+    width: 30vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+.Work-content3 {
+    position: relative;
+    top: -2vw;
+    left: -12vw;
+    width: 30vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+.Work-content4 {
+    position: relative;
+    top: -5vw;
+    left: -17vw;
+    width: 32vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    gap: 1vw;
+}
+
+.Work-content5 {
+    position: relative;
+    top: -5vw;
+    left: -5vw;
+    width: 32vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    gap: 1vw;
+}
+
+.Work-title {
+    z-index: 5;
+    margin-bottom: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text horizontally */
+    justify-content: center;
+    text-align: center; /* Center text inside h2 and p */
+
+}
+
+h2 {
+    font-size: 3.33vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0 0 1.5vw 0; 
+    width: 40vw;
+
+}
+
+p {
+    font-size: 2vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0;
+}
+
+.p-tools {
+
+    font-size: 1.5vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin-top: 2vw;
+    font-style: italic;
+}
+
+#visitwork {
+    border-radius: 1.3vw; 
+    border: 0.21vw solid #e2e9e4; 
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.7vw 1.5vw; 
+    margin: 0 auto; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-size: 1.3vw;
+    color: #e2e9e4;
+    text-align: center; /* Ensure text is centered inside the button */
+}
+
+.button-outline {
+    border-radius: 1.3vw; 
+    border: 0.21vw solid #e2e9e4; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.7vw 1.5vw; 
+    margin: 0 auto; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-size: 1.3vw;
+    color: #e2e9e4;
+    text-align: center; /* Ensure text is centered inside the button */
+    text-decoration: none;
+
+}
+
+.button-outline:hover {
+    background-color: #e2e9e4; 
+    color: #131b18; 
+}
+
+#Shinto-view {
+    text-decoration: none; 
+    color: inherit;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    width: 100%; /* Ensure the button takes up the full width of the parent */
+}
+
+#Resi-view, #Resi-yt {
+    text-decoration: none;
+}
+
+#Nhan {
+    width: 60vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.Nhan {
+    width: 60vw;
+    height: 40vw;
+    position: relative;
+   left: -17vw;
+   top: -5vw;
+   z-index: 1;
+}
+
+#NXNB {
+    width: 60vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.NXNB {
+    width: 43vw;
+    height: 40vw;
+    position: relative;
+   left: -15vw;
+   top: -4.5vw;
+   z-index: 1;  
+}
+
+#Resi {
+    width: 60vw;
+    height: 35vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.Resi {
+    width: 50vw;
+    height: 40vw;
+    position: relative;
+   left: -13vw;
+   top: -5vw;
+   z-index: 1;
+}
+
+
+
+#Thechase {
+    width: 60vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover; 
+}
+
+.Thechase {
+    width: 80vw;
+    height: 40vw;
+    position: relative;
+   left: -17vw;
+   top: 0vw;
+   z-index: 1;
+}
+
+#Shinto-cards {
+    width: 100vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card {
+    width: 70px;  /* Increased card width */
+    height: 140px; /* Increased card height */
+    position: absolute;
+    top: 7vw;
+    left: 20vw;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px; /* Increased font size */
+    font-family: Arial, sans-serif;
+    transition: transform 1s ease;
+    opacity: 0;
+    object-fit: cover;
+}
+
+.card img {
+    width: 15vw;
+}
+
+/* Additional styles for the card content */
+.card:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+#Nhan-view {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+/* footer */
+
+
+footer {
+    cursor: pointer;
+    width: 100%;
+    height: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(0deg, rgba(64, 91, 81, 0.5) 50%, rgba(19, 27, 24, 0) 100%);
+    z-index: 1000;
+    padding-bottom: 10vw;
+}
+
+
+@media screen and (max-device-width: 1024px) {
+
+    .nav-bar-button {
+        font-size: 1.5vw; /* Increase font size slightly for tablets */
+    }
+
+    .logo {
+        width: 12vw; /* Adjust logo size for tablets */
+    }
+
+    .nav-bar {
+        position: sticky;
+        padding: 0 5vw 0 1vw; /* Adjust padding to ensure space distribution */
+    }
+
+    
+  
+    
+    .button-p {
+        font-size: 3vw;
+        color: #e2e9e4;
+        font-family: 'Bricolage Grotesque', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    .hoa-container {
+        animation: none; /* Disable animation */
+        width: 100vw; /* Set to initial size */
+        height: 60vh; /* Set to initial size */
+        position: absolute;
+        top: 35vh;
+        left: 0vw;
+    }
+    
+    .hoa {
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        position: relative;
+        left: 2vw;
+        rotate: -60deg;
+    }
+
+    /* Additional adjustments for iPads */
+
+     h2 {
+        font-size: 5vw;
+        text-align: center;
+     }
+
+
+     .Section-container {
+        position: relative;
+        height: 65vw;
+        width: 100vw;
+        margin-bottom: 25vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    
+    .Section-container3 {
+        position: relative;
+        height: 35vw;
+        width: 100vw;
+        margin-bottom: 10vw;
+        margin-top: 20vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .workcontainer {
+        position: relative;
+        height: 50vw;
+        width: 100vw;
+        margin-bottom: 10vw;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        gap: 0vw;
+        margin: 0vw 10vw;
+        padding: 0vw 5vw;
+    }
+    
+    .Work-content1 {
+        position: relative;
+        top: 0vw;
+        left: -43vw;
+        width: 37vw;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally */
+        justify-content: center; /* Center children vertically */
+    }
+    
+    .Work-content2 {
+        position: relative;
+        top:-10vw;
+        left: 22vw;
+        width: 30vw;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally */
+        justify-content: center; /* Center children vertically */
+    }
+    
+    .Work-content3 {
+        position: relative;
+        top: -10vw;
+        left: -12vw;
+        width: 30vw;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center children horizontally */
+        justify-content: center; /* Center children vertically */
+    }
+    
+    .Work-title {
+        z-index: 5;
+        margin-bottom: 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center text horizontally */
+        justify-content: center;
+        text-align: center; /* Center text inside h2 and p */
+    
+    }
+
+    
+
+    h2 {
+        position: relative;
+        font-size: 4vw;
+        display: flex;
+        color: #e2e9e4;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        padding: 0vw 2vw;
+        margin: 2vw 0;
+    }
+    
+    p {
+        font-size: 2.5vw;
+        color: #e2e9e4;
+        padding: 0vw;
+        margin: 0;
+    }
+    
+    #visitwork {
+        border-radius: 1.3vw; 
+        border: 0.21vw solid #e2e9e4; 
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 0.7vw 1.5vw; 
+        margin: 0 auto; 
+        transition: background-color 0.3s ease, color 0.3s ease; 
+        font-size: 1.3vw;
+        color: #e2e9e4;
+        text-align: center; /* Ensure text is centered inside the button */
+    }
+    
+    .button-outline {
+        position: relative;
+        border-radius: 2.5vw;
+        /* 25px to vw */
+        border: 0.4vw solid #e2e9e4;
+        /* 4px to vw */
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 1vw 2.5vw;
+        /* 20px to vw */
+        margin: 0 auto;
+        /* Center align horizontally */
+        transition: background-color 0.3s ease, color 0.3s ease;
+        /* Smooth transition */
+        font-size: 2.5vw;
+        color: #e2e9e4;
+        text-decoration: none;
+        margin-top: 2vw;
+    }
+
+    
+    
+    
+    #Shinto-view, #Resi-view {
+        font-size: 3vw;
+        display: flex;
+        justify-content: center; /* Center the button horizontally */
+        width: 100%; /* Ensure the button takes up the full width of the parent */
+    }
+
+    #Nhan-view {
+        position: relative;
+        top: 55vw;
+        left: 0vw;
+        text-decoration: none; /* Remove the underline from links */
+        color: inherit; /* Inherit the text color */
+    }
+    
+    #Nhan {
+        width: 60vw;
+        height: 40vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        object-fit: cover;
+        position: relative;
+        left: -58vw;
+        top: 20vw;
+    }
+    
+    .Nhan {
+        width: 80vh;
+        height: 60vh;
+        position: relative;
+       left: 23vw;
+       top: 0vw;
+       z-index: -50;
+    }
+    
+    #Thechase {
+        width: 60vw;
+        height: 40vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        object-fit: cover; 
+    }
+    
+    .Thechase {
+        width: 90vw;
+        height: 60vw;
+        position: relative;
+       left: -12vw;
+       top: 0vw;
+       z-index: 1;
+    }
+    
+    #Shinto-cards {
+        width: 100vw;
+        height: 50vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        left: 5vw;
+        top: 5vw;
+    }
+    
+    .card {
+        width: 4.7vw;
+            /* Increased card width */
+            height: 16.7vh;
+            /* Converted card height */
+            position: absolute;
+            top: 7vw;
+            left: 20vw;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            /* Increased font size */
+            font-family: Arial, sans-serif;
+            transition: transform 1s ease;
+            opacity: 0;
+            object-fit: cover;
+    }
+
+
+   
+    footer {
+        padding-bottom: 5vh;
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+
+
+    /* PHONE NAVBAR --------------------*/
+
+
+    .nav-bar {
+        position: sticky;
+    }
+
+    .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #131b18;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align to the right */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.5s ease-in-out; /* Smooth slide-in effect */
+    z-index: 999;
+    visibility: hidden; /* Hidden initially */
+}
+
+.nav-links.active {
+    transform: translateX(0); /* Slide in when active */
+    visibility: visible;
+}
+    
+.nav-bar-button {
+    font-size: 5vw;
+
+}
+
+.nav-bar-link {
+    margin: 10vh 0vw 10vh ;
+    font-size: 2vw; /* Adjust for larger buttons */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure the links take up the full width */
+    padding-right: vw;
+}
+  
+   
+    .hamburger-menu {
+        display: flex;
+    }
+
+
+/* Active state of the nav-links when hamburger is clicked */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: #131b18;
+    height: 75vh;
+    padding: 20vw 10vw 40vw 0vw;
+    margin: 0;
+    
+}
+
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2vw; 
+}
+
+#lightmode {
+    order: 1;
+    font-size: 4vw; 
+    margin-right: 55vw; 
+}
+
+.logo {
+    order: 2;
+    margin: 0 auto; 
+    transform: translateX(-50%); 
+    left: 50%;
+    position: absolute; 
+    top: 10%;
+    width: 25vw;
+}
+
+.hamburger-menu {
+    order: 3;
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+    width: 10vw; 
+}
+
+/*-----------------------------------*/ 
+
+
+
+h2 {
+    position: relative;
+    font-size: 5vw;
+    display: flex;
+    color: #e2e9e4;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 3vw;
+    margin: 0;
+   width: 40vw;
+}
+
+p {
+    font-size: 3.5vw;
+    width: 40vw;
+}
+
+ .Section-container {
+    position: relative;
+    height: 65vh;
+    width: 100vw;
+    margin-bottom: 30vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.Section-container3 {
+    position: relative;
+    height: 35vw;
+    width: 100vw;
+    margin-bottom: 5vw;
+    margin-top: 0vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.workcontainer {
+    position: relative;
+    height: 50vw;
+    width: 100vw;
+    margin-bottom: 10vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 0vw;
+    margin: 0vw 10vw;
+    padding: 0vw 5vw;
+}
+
+.Work-content1 {
+    position: relative;
+    top: 90vw;
+    left: -65vw;
+    width: 50vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+.Work-content2 {
+    position: relative;
+    top:-20vw;
+    left: 22vw;
+    width: 30vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+.Work-content3 {
+    position: relative;
+    top: -20vw;
+    left: -15vw;
+    width: 30vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+.Work-title {
+    z-index: 5;
+    margin-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text horizontally */
+    justify-content: center;
+    text-align: center; /* Center text inside h2 and p */
+
+}
+
+
+#visitwork {
+    border-radius: 1.3vw; 
+    border: 0.21vw solid #e2e9e4; 
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.7vw 1.5vw; 
+    margin: 0 auto; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-size: 1.3vw;
+    color: #e2e9e4;
+    text-align: center; /* Ensure text is centered inside the button */
+}
+
+
+.button-outline {
+    font-size: 4vw;
+    position: relative;
+    border-radius: 3vw; /* 25px to vw */
+    border: 0.5vw solid #e2e9e4; /* 4px to vw */
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 2vw 5vw; /* 20px to vw */
+    margin: 0 auto; /* Center align horizontally */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: #e2e9e4;
+    z-index: 500;
+    text-decoration: none;
+
+}
+
+
+#Shinto-view {
+    font-size: 3vw;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    width: 100%; /* Ensure the button takes up the full width of the parent */
+    z-index: 500;
+}
+
+#Nhan-view {
+    position: relative;
+    top: 52vw;
+    left: 0vw;
+    z-index: 500;
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+#Nhan {
+    width: 60vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover;
+    position: relative;
+    left: -18vw;
+    top: 15vw;
+}
+
+.Nhan {
+    width: 40vh;
+    height: 30vh;
+    position: relative;
+   left: -17vw;
+   top: -5vw;
+   z-index: 1;
+}
+
+#Thechase {
+    width: 60vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover; 
+}
+
+.Thechase {
+    width: 90vw;
+    height: 60vw;
+    position: relative;
+   left: -12vw;
+   top: 0vw;
+   z-index: 1;
+}
+
+#Shinto-cards {
+    width: 100vw;
+    height: 50vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    left: 34vw;
+    top: 0vw;
+}
+
+.card {
+    width: 2.5vw;
+        /* Increased card width */
+        height: 10vh;
+        /* Converted card height */
+        position: absolute;
+        top: 7vw;
+        left: 20vw;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        /* Increased font size */
+        font-family: Arial, sans-serif;
+        transition: transform 1s ease;
+        opacity: 0;
+        object-fit: cover;
+}
+
+
+
+
+
+
+
+/*-----------------------------------*/ 
+    footer .nav-bar-button {
+        font-size: 4vw;
+        height: auto;
+    }
+
+    footer b, #MoneyLe {
+        position: relative;
+       left: -12vw;
+        width: 50vw; 
+      }
+
+      footer {
+        display: flex;
+        gap: 2vw;
+        width: 100%;
+        height: 20vh;
+      }
+
+}

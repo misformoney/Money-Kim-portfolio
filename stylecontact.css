@@ -1,0 +1,908 @@
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #131b18;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    text-align: center;
+    font-size: 3vh;
+    color: rgba(226, 233, 228, 0.5);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    min-height: 100vh; /* Ensure body takes full height of viewport */
+}
+
+.light-mode {
+    filter: invert(1);
+    background-color: #EBE4E7;
+    color: #131b18;
+}
+
+.light-mode .work-container:hover {
+    filter: invert(1); /* Revert the inversion when hovering */
+    transition: filter 0.3s ease-in-out;
+}
+
+.light-mode .overlay-content {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    filter: none; 
+    z-index: 3000;
+}
+
+/* Nav bar */
+
+/* Nav bar */
+
+.nav-bar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.8vw 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(180deg, rgba(64, 91, 81, 0.5) 0%, rgba(19, 27, 24, 0) 100%);
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 8vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.nav-bar-button {
+    font-size: 1.05vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-bar-button:hover {
+    text-decoration: underline; 
+}
+
+
+.nav-bar-link {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.button-outline {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    gap: 3vw; /* Adjusted gap to reduce excessive spacing */
+    padding: 0 2vw; /* Ensures even padding on both sides of the buttons */
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #e2e9e4;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.work-link{
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+
+/*CONTACT */
+
+.Contact {
+    position: relative;
+    width: 100%;
+    height: 75vh; 
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.Content {
+    text-align: center; 
+    max-width: 80vw; 
+    padding: 2vw;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 3.33vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0 0 1.5vw 0; 
+}
+
+p {
+    font-size: 2vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0;
+}
+
+.button-outline {
+    cursor: pointer;
+    position: relative;
+    border-radius: 1.3vw; /* 25px to vw */
+    border: 0.21vw solid #e2e9e4; /* 4px to vw */
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.7vw 1.5vw; /* 20px to vw */
+    margin: 0 auto; /* Center align horizontally */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: #e2e9e4;
+    margin: 2vw;
+}
+
+.button-outline:hover {
+    background-color: #e2e9e4;
+}
+
+.button-p {
+    font-size: 1.7vw;
+    color: #e2e9e4;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.button-outline:hover .button-p {
+    color: #131b18; /* Change text color on hover */
+}
+
+.work-link{
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+.button-outline {
+    text-decoration: none; /* Remove the underline from links */
+    color: inherit; /* Inherit the text color */
+}
+
+
+.Flowers {
+    width: 10vw; 
+    height: auto; 
+}
+
+
+@keyframes spinA {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinB {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.Flowers:hover img {
+    filter: invert(1); /* Invert colors on hover */
+}
+
+
+
+#Flower1 {
+    position: absolute;
+    top: 60%;
+    left: 7%;
+    width: 17vw; 
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower2 {
+    position: absolute;
+    top: -5%;
+    left: 60%;
+    width: 7vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower3 {
+    position: absolute;
+    top: -15%;
+    left: 30%;
+    width: 13vw; /* Adjust the size as needed */
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower4 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    width: 40vw; /* Adjust the size as needed */
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower5 {
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    width: 12vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower6 {
+    position: absolute;
+    top: 85%;
+    left: 53%;
+    width: 8vw; /* Adjust the size as needed */
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower7 {
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    width: 25vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+
+#Flower8 {
+    position: absolute;
+    top: 85%;
+    left: 33%;
+    width: 8vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+/* The Overlay (hidden by default) */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+}
+
+/* Overlay Content */
+.overlay-content {
+    position: relative; /* Change to fixed to make sure it is relative to the viewport */
+    top: 50vh; 
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: #131b18; 
+    padding: 70px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 42vw;
+    text-align: center;
+    color: #e2e9e4;
+    line-height: 200%;
+    z-index: 3000; /* Ensure it is on top of other content */
+}
+
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #e2e9e4;
+}
+
+.close-button:hover {
+    color: #131b18;
+}
+
+
+/* footer */
+
+
+footer {
+    cursor: pointer;
+    width: 100%;
+    height: 19vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.05vw;
+    color: #e2e9e4;
+    background: linear-gradient(0deg, rgba(64, 91, 81, 0.5) 50%, rgba(19, 27, 24, 0) 100%);
+    z-index: 850;
+    padding-bottom: 10vw;
+}
+
+
+/* -------------------------------------- */ 
+
+@media screen and (max-device-width: 1024px) {
+
+    .nav-bar-button {
+        font-size: 1.5vw; /* Increase font size slightly for tablets */
+    }
+
+    .logo {
+        width: 12vw; /* Adjust logo size for tablets */
+    }
+
+    .nav-bar {
+        position: sticky;
+        padding: 0 5vw 0 1vw; /* Adjust padding to ensure space distribution */
+    }
+
+    
+    .button-outline {
+        position: relative;
+        border-radius: 2.5vw; /* 25px to vw */
+        border: 0.5vw solid #e2e9e4; /* 4px to vw */
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        padding: 1vw 2.5vw; /* 20px to vw */
+        margin: 0 auto; /* Center align horizontally */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+        color: #e2e9e4;
+    }
+    
+    
+    .button-p {
+        font-size: 3vw;
+        color: #e2e9e4;
+        font-family: 'Bricolage Grotesque', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        transition: color 0.3s ease; /* Smooth transition */
+    }
+
+    .Contact {
+        position: relative;
+        width: 100%;
+        height: 77vh; 
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    }
+    
+    .Content {
+        text-align: center; 
+        max-width: 80vw; 
+        padding: 2vw;
+        box-sizing: border-box;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+    }
+    
+    h2 {
+        position: relative;
+        font-size: 5vw;
+        display: flex;
+        color: #e2e9e4;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+        padding: 0vw 2vw;
+        margin: 2vw 0;
+        top: -5vh;
+    }
+    
+    p {
+        font-size: 2.5vw;
+        color: #e2e9e4;
+        padding: 0vw;
+        margin: 0;
+    }
+
+    #Flower1 {
+        position: absolute;
+        top: 50%;
+        left: 7%;
+        width: 20vw; 
+        animation: spinA 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    #Flower2 {
+        position: absolute;
+        top: -5%;
+        left: 65%;
+        width: 15vw; /* Adjust the size as needed */
+        animation: spinB 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    #Flower3 {
+        position: absolute;
+        top: -5%;
+        left: 35%;
+        width: 20vw; /* Adjust the size as needed */
+        animation: spinA 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    #Flower4 {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        width: 80vw; /* Adjust the size as needed */
+        animation: spinA 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    #Flower5 {
+        position: absolute;
+        top: 10%;
+        left: 80%;
+        width: 30vw; /* Adjust the size as needed */
+        animation: spinB 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    #Flower6 {
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        width: 40vw; /* Adjust the size as needed */
+        animation: spinA 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    #Flower7 {
+        position: absolute;
+        top: -5%;
+        left: -17%;
+        width: 45vw; /* Adjust the size as needed */
+        animation: spinB 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    
+    #Flower8 {
+        position: absolute;
+        top: 45%;
+        left: 70%;
+        width: 15vw; /* Adjust the size as needed */
+        animation: spinB 20s linear infinite; 
+        transition: filter 0.5s ease; 
+    }
+    
+    /* The Overlay (hidden by default) */
+    .overlay {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 3000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    }
+    
+    /* Overlay Content */
+    .overlay-content {
+        position: relative; /* Change to fixed to make sure it is relative to the viewport */
+        top: 50vh; 
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        background-color: #131b18; 
+        padding: 5vw 12vw 0;
+        border-radius: 5vw;
+        width: 80%;
+        max-width: 52vw;
+        text-align: center;
+        color: #e2e9e4;
+        line-height: 200%;
+        z-index: 3000;
+        
+    }
+
+    .overlay-content h2 {
+        position: relative;
+        left: -1vw;
+        top: -4vh;
+        font-size: 4.5vw;
+    }
+    
+    
+    /* Close Button */
+
+
+    .close-button {
+        position: absolute;
+        top: 1vw;
+        right: 5vw;
+        font-size: 5vw;
+        cursor: pointer;
+        color: #e2e9e4;
+    }
+    
+
+
+    footer {
+        padding-bottom: 6vh;
+    }
+
+}
+
+@media screen and (max-device-width: 768px) {
+
+
+    /* PHONE NAVBAR --------------------*/
+
+
+    .nav-bar {
+        position: sticky;
+    }
+
+    .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #131b18;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Align to the right */
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 0.5s ease-in-out; /* Smooth slide-in effect */
+    z-index: 999;
+    visibility: hidden; /* Hidden initially */
+}
+
+.nav-links.active {
+    transform: translateX(0); /* Slide in when active */
+    visibility: visible;
+}
+    
+.nav-bar-button {
+    font-size: 5vw;
+
+}
+
+.nav-bar-link {
+    margin: 10vh 0vw 10vh ;
+    font-size: 2vw; /* Adjust for larger buttons */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure the links take up the full width */
+    padding-right: 0vw;
+    z-index: 1000;
+}
+  
+   
+    .hamburger-menu {
+        display: flex;
+    }
+
+
+/* Active state of the nav-links when hamburger is clicked */
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background-color: #131b18;
+    height: 75vh;
+    padding: 20vw 25vw 40vw 0vw;
+    margin: 0;
+    
+}
+
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2vw; 
+}
+
+#lightmode {
+    order: 1;
+    font-size: 4vw; 
+    margin-right: 55vw; 
+}
+
+.logo {
+    order: 2;
+    margin: 0 auto; 
+    transform: translateX(-50%); 
+    left: 50%;
+    position: absolute; 
+    top: 10%;
+    width: 25vw;
+}
+
+.hamburger-menu {
+    order: 3;
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+    width: 10vw; 
+}
+
+/*-----------------------------------*/ 
+
+
+.button-outline {
+    position: relative;
+    border-radius: 3vw; /* 25px to vw */
+    border: 0.5vw solid #e2e9e4; /* 4px to vw */
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 2vw 5vw; /* 20px to vw */
+    margin: 0 auto; /* Center align horizontally */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: #e2e9e4;
+}
+
+
+.button-p {
+    font-size: 4vw;
+    color: #e2e9e4;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+
+.Contact {
+    position: relative;
+    width: 100%;
+    height: 72vh; 
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.Content {
+    text-align: center; 
+    max-width: 80vw; 
+    padding: 2vw;
+    box-sizing: border-box;
+    
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    position: relative;
+    top: -5vw;
+    z-index: 500;
+}
+
+h2 {
+    position: relative;
+    font-size: 5vw;
+    display: flex;
+    color: #e2e9e4;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    padding: 0vw 2vw;
+    margin: 2vw 0;
+    top: -8vh;
+}
+
+p {
+    font-size: 2.5vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin: 0;
+}
+
+#Flower1 {
+    position: absolute;
+    top: 40%;
+    left: 7%;
+    width: 20vw; 
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower2 {
+    position: absolute;
+    top: 5%;
+    left: 65%;
+    width: 15vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower3 {
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    width: 20vw; /* Adjust the size as needed */
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower4 {
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    width: 100vw; /* Adjust the size as needed */
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower5 {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    width: 30vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower6 {
+    position: absolute;
+    top: 65%;
+    left: 2%;
+    width: 40vw; /* Adjust the size as needed */
+    animation: spinA 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+#Flower7 {
+    position: absolute;
+    top: 0%;
+    left: -17%;
+    width: 45vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+
+#Flower8 {
+    position: absolute;
+    top: 50%;
+    left: 72%;
+    width: 20vw; /* Adjust the size as needed */
+    animation: spinB 20s linear infinite; 
+    transition: filter 0.5s ease; 
+}
+
+/* The Overlay (hidden by default) */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+}
+
+/* Overlay Content */
+.overlay-content {
+    position: relative; /* Change to fixed to make sure it is relative to the viewport */
+    top: 50vh; 
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: #131b18; 
+    padding: 5vw 12vw 0;
+    border-radius: 5vw;
+    width: 80%;
+    height: 21vh;
+    text-align: center;
+    color: #e2e9e4;
+    line-height: 120%;
+    z-index: 3000;
+    
+}
+
+.overlay-content h2 {
+    position: relative;
+    left: -3vw;
+    top: -6vh;
+    font-size: 4.5vw;
+
+}
+
+.overlay-content p {
+    position: relative;
+    left: -1vw;
+    top: -4vh;
+    font-size: 4vw;
+    padding: 10vw 2vw 0;
+
+
+}
+
+
+/* Close Button */
+
+
+.close-button {
+    position: absolute;
+    top: 1vw;
+    right: 5vw;
+    font-size: 5vw;
+    cursor: pointer;
+    color: #e2e9e4;
+}
+
+
+
+
+
+    footer .nav-bar-button {
+        font-size: 4vw;
+        height: auto;
+    }
+
+    footer b, #MoneyLe {
+        position: relative;
+       left: -12vw;
+        width: 50vw; 
+      }
+
+      footer {
+        display: flex;
+        gap: 2vw;
+        width: 100%;
+        height: 20vh;
+      }
+
+}
