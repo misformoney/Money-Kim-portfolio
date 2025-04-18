@@ -1225,3 +1225,17 @@ footer {
         height: auto;
     }
 }
+
+
+@media screen and (max-device-width: 350px) {
+
+.Greetings {
+    position: absolute;
+    left: 18px;
+    top: 130px;
+    font-size: 25px;
+    width: 500px;
+    height: auto;
+    line-height: 140%;
+}
+}
