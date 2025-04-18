@@ -504,9 +504,9 @@ footer {
 
      .Section-container {
         position: relative;
-        height: 65vw;
+        height: 40vw;
         width: 100vw;
-        margin-bottom: 25vw;
+        margin-bottom: 15vw;
         align-items: center;
         justify-content: center;
         align-content: center;
@@ -518,7 +518,7 @@ footer {
         height: 35vw;
         width: 100vw;
         margin-bottom: 10vw;
-        margin-top: 20vw;
+        margin-top: 0;
         align-items: center;
         justify-content: center;
         align-content: center;
@@ -554,15 +554,15 @@ footer {
     
     .Work-content2 {
         position: relative;
-        top:-10vw;
-        left: 22vw;
+        top: 0;
+        left: 0vw;
         width: 30vw;
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: column; /* Stack children vertically */
-        align-items: center; /* Center children horizontally */
-        justify-content: center; /* Center children vertically */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     .Work-content3 {
@@ -580,7 +580,7 @@ footer {
     
     .Work-title {
         z-index: 5;
-        margin-bottom: 3vw;
+        margin-bottom: 1vw;
         display: flex;
         flex-direction: column;
         align-items: center; /* Center text horizontally */
@@ -593,8 +593,7 @@ footer {
 
     h2 {
         position: relative;
-        font-size: 4vw;
-        display: flex;
+        font-size: 3vw;
         color: #e2e9e4;
         text-align: center;
         align-items: center;
@@ -641,10 +640,10 @@ footer {
         /* Center align horizontally */
         transition: background-color 0.3s ease, color 0.3s ease;
         /* Smooth transition */
-        font-size: 2.5vw;
+        font-size: 1.5vw;
         color: #e2e9e4;
         text-decoration: none;
-        margin-top: 2vw;
+        margin-top: 0;
     }
 
     
@@ -659,15 +658,15 @@ footer {
 
     #Nhan-view {
         position: relative;
-        top: 55vw;
+        top: 0;
         left: 0vw;
         text-decoration: none; /* Remove the underline from links */
         color: inherit; /* Inherit the text color */
     }
     
     #Nhan {
-        width: 60vw;
-        height: 40vw;
+        width: 80vw;
+        height: 30vw;
         position: relative;
         display: flex;
         justify-content: center;
@@ -675,17 +674,17 @@ footer {
         cursor: pointer;
         object-fit: cover;
         position: relative;
-        left: -58vw;
-        top: 20vw;
+        left: -0;
+        top: 0;
     }
     
     .Nhan {
-        width: 80vh;
-        height: 60vh;
+        width: 50vh;
+        height: 25vh;
         position: relative;
-       left: 23vw;
-       top: 0vw;
-       z-index: -50;
+        left: -14vw;
+        top: 0vw;
+        z-index: -50;
     }
     
     #Thechase {
@@ -743,6 +742,23 @@ footer {
             object-fit: cover;
     }
 
+     .Resi {
+        width: 60vw;
+        height: 80vw;
+        position: relative;
+        left: -13vw;
+        top: -3vw;
+        z-index: 1;
+    }
+
+    .NXNB {
+        width: 50vw;
+        height: 40vw;
+        position: relative;
+        left: -16vw;
+        top: -4.5vw;
+        z-index: 1;
+    }
 
    
     footer {
@@ -852,27 +868,69 @@ footer {
 
 h2 {
     position: relative;
-    font-size: 5vw;
-    display: flex;
+    font-size: 6vw;
     color: #e2e9e4;
     text-align: center;
     align-items: center;
     justify-items: center;
     padding: 3vw;
     margin: 0;
-   width: 40vw;
+    width: 80vw;
 }
 
 p {
-    font-size: 3.5vw;
-    width: 40vw;
+    font-size: 4.5vw;
+    width: 80vw;
 }
 
- .Section-container {
+.Work-content4 {
+    position: relative;
+    top: 26vw;
+    left: -15vw;
+    width: 32vw;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.Resi {
+    width: 90vw;
+    height: 60vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+#Resi {
+    width: 90vw;
+    height: 60vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.p-tools {
+    font-size: 3vw;
+    color: #e2e9e4;
+    padding: 0vw;
+    margin-top: 2vw;
+    font-style: italic;
+}
+
+.Section-container {
     position: relative;
     height: 65vh;
     width: 100vw;
-    margin-bottom: 30vw;
+    margin-bottom: 50vw;
     align-items: center;
     justify-content: center;
     align-content: center;
@@ -898,8 +956,8 @@ p {
     align-items: center;
     justify-content: center;
     align-content: center;
-    display: grid; 
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 0vw;
     margin: 0vw 10vw;
     padding: 0vw 5vw;
@@ -907,28 +965,26 @@ p {
 
 .Work-content1 {
     position: relative;
-    top: 90vw;
-    left: -65vw;
+    top: 60vw;
+    left: -15vw;
     width: 50vw;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .Work-content2 {
     position: relative;
-    top:-20vw;
-    left: 22vw;
+    top: 62vw;
+    left: -13vw;
     width: 30vw;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .Work-content3 {
@@ -942,6 +998,83 @@ p {
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
     justify-content: center; /* Center children vertically */
+}
+
+
+.Work-content5 {
+    position: relative;
+    top: -8vw;
+    left: -15vw;
+    width: 32vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.Work-content3 {
+    position: relative;
+    top: -105vw;
+    left: -15vw;
+    width: 30vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Thechase {
+    width: 125vw;
+    height: 71vw;
+    position: relative;
+    left: -18vw;
+    top: 29vw;
+    z-index: 1;
+}
+
+.Section-container4 {
+    position: relative;
+    height: 120vh;
+    width: 100vw;
+    margin-bottom: 50vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.Thechase {
+    width: 130vw;
+    height: 80vw;
+    position: relative;
+    left: -20vw;
+    top: 24vw;
+    z-index: 1;
+}
+
+.Section-container3 {
+    position: relative;
+    height: 49vw;
+    width: 100vw;
+    margin-bottom: 5vw;
+    margin-top: 96vw;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.NXNB {
+    width: 93vw;
+    height: 51vw;
+    position: relative;
+    left: -14vw;
+    top: 23.5vw;
+    z-index: 1;
 }
 
 .Work-title {
@@ -1001,7 +1134,7 @@ p {
 
 #Nhan-view {
     position: relative;
-    top: 52vw;
+    top: 0;
     left: 0vw;
     z-index: 500;
     text-decoration: none; /* Remove the underline from links */
@@ -1012,18 +1145,17 @@ p {
     width: 60vw;
     height: 40vw;
     position: relative;
-    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     object-fit: cover;
     position: relative;
-    left: -18vw;
-    top: 15vw;
+    left: 4vw;
+    top: -45vw;
 }
 
 .Nhan {
-    width: 40vh;
+    width: 47vh;
     height: 30vh;
     position: relative;
    left: -17vw;
@@ -1042,15 +1174,6 @@ p {
     object-fit: cover; 
 }
 
-.Thechase {
-    width: 90vw;
-    height: 60vw;
-    position: relative;
-   left: -12vw;
-   top: 0vw;
-   z-index: 1;
-}
-
 #Shinto-cards {
     width: 100vw;
     height: 50vw;
@@ -1060,7 +1183,7 @@ p {
     align-items: center;
     cursor: pointer;
     position: relative;
-    left: 34vw;
+    left: 15vw;
     top: 0vw;
 }
 
