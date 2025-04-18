@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to trigger the animation for smaller displays (Mobile)
     function animateCardsSmall() {
         cards.forEach((card, index) => {
-            const angle = -30 + (index * 18);
+            const angle = -50 + (index * 18);
             const xOffset = 20 * Math.cos(angle * Math.PI / 100);  // Decreased xOffset for smaller cards
             const yOffset = 100 * Math.sin(angle * Math.PI / 100); // Decreased yOffset for smaller cards
             card.style.transform = `translate(${xOffset}px, ${yOffset}px) rotate(${angle}deg)`;
