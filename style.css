@@ -587,6 +587,7 @@ h2 {
 
 .carousel-container {
     display: flex;
+    
     overflow-x: auto;
     margin: 1vh 0vw 1.5vh 3.5vw;
     scrollbar-width: none; 
@@ -821,7 +822,7 @@ footer {
         width: 100vw; /* Set to initial size */
         height: 60vh; /* Set to initial size */
         position: absolute;
-        top: 35vh;
+        top: 38vh;
         left: 0vw;
     }
     
@@ -845,20 +846,21 @@ footer {
     }
 
     .Greetings {
-        left: 12vw;
-        top: 14vh;
-        font-size: 4vh; /* Adjust font size for iPads */
-        width: 70vw; 
+        position: absolute;
+        left: 100px;
+        top: 130px;
+        font-size: 50px; /* Adjust font size for iPads */
+        width: 1000px; 
         height: auto;
         line-height: 140%;;
     }
 
     #designer {
-        position: relative;
-        left: 1.5vw;
-        top: -12.8vw;
-        font-size: 4vh; /* Adjust font size for iPads */
-        width: 80vw; 
+        position: absolute;
+        left: -111px;
+        top: 190px;
+        font-size: 50px; /* Adjust font size for iPads */
+        width: 1000px; 
         height: auto;
     }
 
@@ -872,7 +874,7 @@ footer {
         text-align: center;
         justify-content: center;
         position: relative;
-        left: -12.5vw;
+        left: 0vw;
     }
 
     #recentworks-container {
@@ -951,7 +953,7 @@ footer {
     }
 }
 
-@media screen and (max-device-width: 768px) {
+@media screen and (max-device-width: 767px) {
 
 
     /* PHONE NAVBAR --------------------*/
@@ -1069,22 +1071,22 @@ footer {
     }
 
     .Greetings {
-        left: 10vw;
-        top: 20vh;
-        font-size: 3vh; /* Adjust font size for iPads */
-        width: 70vw; 
+        position: absolute;
+        left: 30px;
+        top: 130px;
+        font-size: 30px; /* Adjust font size for iPads */
+        width: 500px; 
         height: auto;
-        text-align: left;
+        line-height: 140%;;
     }
 
     #designer {
-        position: relative;
-        left: 2.5vw;
-        top: -15.5vw;
-        font-size: 3vh; /* Adjust font size for iPads */
-        width: 90vw; 
+        position: absolute;
+        left: -80px;
+        top: 115px;
+        font-size: 30px; /* Adjust font size for iPads */
+        width: 500px; 
         height: auto;
-
     }
 
 
@@ -1092,7 +1094,7 @@ footer {
         width: 50vw; 
         align-items: center;
         position: relative;
-        left: -7vw;
+        left: 0;
         font-size: 5vw;
     }
 
@@ -1200,4 +1202,26 @@ footer {
         height: 20vh;
       }
 
+}
+
+@media screen and (max-device-width: 390px) {
+
+    .Greetings {
+        position: absolute;
+        left: 50px;
+        top: 130px;
+        font-size: 25px; /* Adjust font size for iPads */
+        width: 500px; 
+        height: auto;
+        line-height: 140%;;
+    }
+
+    #designer {
+        position: absolute;
+        left: -68px;
+        top: 96px;
+        font-size: 25px; /* Adjust font size for iPads */
+        width: 500px; 
+        height: auto;
+    }
 }
