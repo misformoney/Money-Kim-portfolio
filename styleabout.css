@@ -759,11 +759,11 @@ canvas {
 }
 
 #start-text {
-    font-size: 3vw;
+    font-size: 2vw;
     color: #e2e9e4;
     margin: 0;
     position: relative;
-    top: -11vh;
+    top: 5vh;
     left: -15%;
     transform: translateX(-50%);
     opacity: 0.5;
