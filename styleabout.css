@@ -758,10 +758,29 @@ canvas {
     display: none;
 }
 
-
+#start-text {
+    font-size: 3vw;
+    color: #e2e9e4;
+    margin: 0;
+    position: relative;
+    top: -11vh;
+    left: -15%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+    animation: fadeInOut 2.5s;
+    animation-iteration-count: infinite;
+}
 
 /* Media Queries */
 @media screen and (max-device-width: 1024px) {
+
+    #section1, #section2, #section3, #section4, #section5, #section6, #section7 {
+        width: 30vw;
+        height: 16vw;
+        position: absolute;
+        top: 28vw;
+        left: 35vw;
+    }
 
     .arrow-left,
     .arrow-right {
@@ -866,25 +885,6 @@ canvas {
         top: 0;
         left: 0;
         border-radius: 0.6vw;
-    }
-
-    #section3,
-    #section4 {
-        width: 23vw;
-        height: 12vw;
-    }
-
-    #section5 , #section6 {
-        width: 23vw;
-        height: 12vw;
-    }
-
-    #section7 {
-        position: absolute;
-        left: 72vw;
-        top: 20vw;
-        width: 30vw;
-        height: 20vw;
     }
 
     .section.active {
@@ -1013,6 +1013,7 @@ canvas {
     }
 
     #start-text {
+        display: none;
         font-size: 3vw;
         color: #e2e9e4;
         margin: 0;
@@ -1030,7 +1031,7 @@ canvas {
         font-size: 2vw;
         display: flex;
         color: #e2e9e4;
-        text-align: center;
+        text-align: left;
         align-items: center;
         justify-items: center;
         padding: 0vw 2vw;
@@ -2052,7 +2053,8 @@ canvas {
     #letter-content {
         display: flex;
         flex-direction: column;
-        padding: 0 6vw 3vw;  /* Adjusted padding to match the letter padding */
+        padding: 0 6vw 3vw;
+        font-size: 2.5vw;
     }
     
     #letter-header {
@@ -2074,7 +2076,10 @@ canvas {
         margin-bottom: 5.2vw;
         color: #e2e9e4;
         text-align: left;
-        font-size: 3.5vw;
+        font-size: 2.5vw;
+        position: relative;
+        top: 0vw;
+        left: -1vw;
     }
     
     #Dear {
@@ -2085,14 +2090,14 @@ canvas {
     
     #Sign {
         height: auto;
-        width: 50vw;
+        width: 30vw;
         margin-top: 1vw;
         padding: 0vw 10vw 0 0;
         align-self: flex-start;
     }
     
     #Money {
-        font-size: 3.5vw;
+        font-size: 2.5vw;
         margin-top: 1vw;
         line-height: 140%;
         color: #e2e9e4;
